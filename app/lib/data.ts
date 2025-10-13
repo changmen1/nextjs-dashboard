@@ -1,3 +1,9 @@
+/*
+ * Author: zxl
+ * 文件描述: 数据查询
+ * 创建时间 2025年10月13日 08:40:56
+ */
+
 import postgres from 'postgres';
 import {
   CustomerField,
@@ -16,13 +22,13 @@ export async function fetchRevenue() {
     // Artificially delay a response for demo purposes.
     // Don't do this in production :)
 
-    // console.log('Fetching revenue data...');
-    // await new Promise((resolve) => setTimeout(resolve, 3000));
+    console.log('Fetching revenue data...');
+    await new Promise((resolve) => setTimeout(resolve, 3000));
 
     const data = await sql<Revenue[]>`SELECT * FROM revenue`;
 
-    // console.log('Data fetch completed after 3 seconds.');
-
+    console.log('Data fetch completed after 3 seconds.');
+    // console.log("服务端获取收入数据", data)
     return data;
   } catch (error) {
     console.error('Database Error:', error);

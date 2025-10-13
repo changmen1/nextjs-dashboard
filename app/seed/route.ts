@@ -1,3 +1,9 @@
+/*
+ * Author: zxl
+ * 文件描述:数据库 种子脚本 
+ * 创建时间 2025年10月11日 16:58:30
+ */
+
 import bcrypt from 'bcrypt';
 import postgres from 'postgres';
 import { invoices, customers, revenue, users } from '../lib/placeholder-data';

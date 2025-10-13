@@ -138,3 +138,72 @@ How to show an active link with the usePathname() hook.
 
 How navigation works in Next.js.
 Next.js 中导航的工作原理。
+
+## 第六章 设置数据库
+
+> vercel托管项目 阿里云解析就可以
+
+Push your project to GitHub.
+将您的项目推送到 GitHub。
+
+Set up a Vercel account and link your GitHub repo for instant previews and deployments.
+设置 Vercel 账户并将您的 GitHub 仓库链接，以实现即时预览和部署。
+
+Create and link your project to a Postgres database.
+创建并将您的项目链接到一个 Postgres 数据库。
+
+Seed the database with initial data.
+初始化数据库数据。
+
+## 第七章 获取数据
+
+Learn about some approaches to fetching data: APIs, ORMs, SQL, etc.
+了解一些获取数据的方法：API、ORM、SQL 等。
+
+How Server Components can help you access back-end resources more securely.
+了解服务器组件如何帮助你更安全地访问后端资源。
+
+What network waterfalls are.
+什么是网络瀑布。
+
+How to implement parallel data fetching using a JavaScript Pattern.
+如何使用 JavaScript 模式实现并行数据获取。
+
+## 第八章 静态和动态渲染
+
+What static rendering is and how it can improve your application's performance.
+静态渲染是什么以及它如何提高您应用程序的性能。
+
+What dynamic rendering is and when to use it.
+什么是动态渲染以及何时使用它。
+
+Different approaches to make your dashboard dynamic.
+使您的仪表板动态化的不同方法。
+
+Simulate a slow data fetch to see what happens.
+模拟慢速数据获取以查看会发生什么。
+
+## 第九章 流式传输
+
+What streaming is and when you might use it.
+什么是流式传输以及何时可能使用它。
+
+How to implement streaming with loading.tsx and Suspense.
+如何使用 loading.tsx 和 Suspense 实现流式传输。
+
+What loading skeletons are.
+什么是加载骨架。
+
+What Next.js Route Groups are, and when you might use them.
+Next.js 路由组是什么，以及你可能在什么时候使用它们。
+
+Where to place React Suspense boundaries in your application.
+在哪里放置 React Suspense 边界。
+
+```txt
+流式传输是一种数据传输技术，允许你将路由分解成更小的“块”，并随着它们准备就绪，逐步从服务器流式传输到客户端。
+通过流式传输，您可以防止缓慢的数据请求阻塞整个页面。这使用户可以在等待所有数据加载并显示任何 UI 之前，看到并与之交互页面的部分。
+在 Next.js 中，您有两种实现流式传输的方式：
+在页面级别，使用 loading.tsx 文件（为您创建 <Suspense> ）。
+在组件级别，使用 <Suspense> 进行更细粒度的控制。
+```
