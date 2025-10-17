@@ -6,7 +6,7 @@ import Image from "next/image"
 
 export default function Page() {
   return (
-    <main className="flex min-h-screen flex-col p-6">
+    <main className="flex min-h-screen flex-col pl-[28px] pr-[28px] bg-[#1f1e1f] max-w-[1120px] pt-[63px] ml-auto mr-auto">
       <div className="flex h-20 shrink-0 items-end rounded-lg bg-blue-500 p-4 md:h-52">
         <AcmeLogo />
       </div>
@@ -47,6 +47,6 @@ export default function Page() {
           />
         </div>
       </div>
-    </main >
+    </main>
   );
 }

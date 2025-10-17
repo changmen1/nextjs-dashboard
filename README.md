@@ -3,7 +3,7 @@
 This is the starter template for the Next.js App Router Course. It contains the starting code for the dashboard application.
 
 For more information, see the [course curriculum](https://nextjs.org/learn) on the Next.js Website.
-**根据官方学习步骤 记录重要信息**
+**根据官方Nextjs16学习步骤 记录重要信息**
 
 ## 第一章 创建Next.js 应用程序并运行开发服务器
 
@@ -207,3 +207,89 @@ Where to place React Suspense boundaries in your application.
 在页面级别，使用 loading.tsx 文件（为您创建 <Suspense> ）。
 在组件级别，使用 <Suspense> 进行更细粒度的控制。
 ```
+
+## 第十章 部分预渲染
+
+What Partial Prerendering is.
+部分预渲染是什么。
+
+How Partial Prerendering works.
+如何实现部分预渲染。
+
+To install the canary release of Next.js, run:
+要安装 Next.js canary 版本，请运行：
+
+```bash
+    pnpm install next@canary
+``
+
+通过在您的 next.config.ts 文件中添加 ppr 选项来为您的 Next.js 应用启用 PPR：
+
+```ts
+import type { NextConfig } from 'next';
+ 
+const nextConfig: NextConfig = {
+  experimental: {
+    ppr: 'incremental'
+  }
+};
+ 
+export default nextConfig;
+```
+
+接下来，将 experimental_ppr 段配置选项添加到您的仪表板布局中：
+
+```tsx
+import SideNav from '@/app/ui/dashboard/sidenav';
+ 
+export const experimental_ppr = true;
+ 
+// ...
+```
+
+这就是了。在开发过程中，你可能看不到你的应用有什么区别，但在生产环境中，你应该会注意到性能的提升。Next.js 会预渲染路由的静态部分，并将动态部分推迟到用户请求时再渲染。
+
+关于部分预渲染的好处是，您无需更改代码即可使用它。只要您使用 Suspense 来包裹路由的动态部分，Next.js 就会知道您的路由中哪些部分是静态的，哪些是动态的。
+
+我们认为 PPR 有潜力成为 Web 应用的默认渲染模型，将静态站点和动态渲染的优点结合起来。然而，它仍然是实验性的。我们希望在未来使其稳定，并使其成为使用 Next.js 构建的默认方式。
+
+## 第十一章 添加搜索和分页
+
+学习如何使用 Next.js API： useSearchParams ， usePathname ，和 useRouter 。
+
+使用 URL 搜索参数实现搜索和分页。
+
+useSearchParams - 允许您访问当前 URL 的参数。例如，此 URL /dashboard/invoices?page=1&query=pending 的搜索参数将如下所示： {page: '1', query: 'pending'}
+usePathname - 允许您读取当前 URL 的路径名。例如，对于路由 /dashboard/invoices ， usePathname 将返回 '/dashboard/invoices' 。
+useRouter - 启用客户端组件内路由之间的程序化导航。您可以使用多种方法。
+
+何时使用 useSearchParams() 钩子与 searchParams 属性？
+你可能已经注意到你使用了两种不同的方式来提取搜索参数。你使用哪一种取决于你是在客户端还是服务器上工作。<Search是一个客户端组件，所以你使用了 useSearchParams() 钩子从客户端访问参数。
+Table是一个从服务器获取自己数据的服务器组件，所以你可以从页面传递 searchParams 属性到组件。
+作为一般规则，如果你想从客户端读取参数，使用 useSearchParams() 钩子，这样可以避免需要回到服务器。
+
+您在每次按键时都在更新 URL，因此也在每次按键时查询数据库！这对我们的应用来说不是问题，但如果您的应用有数千用户，每个用户在每次按键时都向数据库发送新的请求，那就另当别论了。
+防抖是一种编程实践，它限制了函数可以触发的频率。在我们的情况下，您只想在用户停止输入时查询数据库。
+
+防抖是如何工作的：
+触发事件：当发生应该防抖的事件（如搜索框中的按键）时，计时器开始。
+等待：如果在新事件发生之前计时器尚未到期，计时器将被重置。
+执行：如果计时器到达倒计时结束，防抖函数将被执行。
+您可以通过几种方式实现防抖，包括手动创建自己的防抖函数。为了保持简单，我们将使用名为 use-debounce 的库
+
+## 第十二章 修改数据
+
+React 服务器操作是什么以及如何使用它们来修改数据。
+
+如何处理表单和服务器组件。
+
+与原生 FormData 对象一起工作的最佳实践，包括类型验证。
+
+如何使用 revalidatePath API 重新验证客户端缓存。
+
+如何创建具有特定 ID 的动态路由段。
+
+## 第十三章 错误处理
+
+如何使用特殊的 error.tsx 文件来捕获路由段中的错误，并向用户显示一个回退 UI。
+如何使用 notFound 函数和 not-found 文件来处理 404 错误（对于不存在的资源）。
