@@ -3,8 +3,10 @@
  * 文件描述: 简历
  * 创建时间 2025年10月17日 16:23:00
  */
-// https://github.com/Bloggify/github-calendar
+// https://community.vercel.com/t/deployment-failed/25402
+// https://grubersjoe.github.io/react-github-calendar/#/?user=changmen1
 import Image from "next/image"
+import GitHubCalendar from 'react-github-calendar';
 
 export default function Page() {
   return (
@@ -38,7 +40,8 @@ export default function Page() {
       </div>
       {/* github */}
       <div className="box-border border border-[#d0d7de] rounded-md flex flex-col justify-center items-center w-[764px] mx-auto py-2">
-        {/* <Image width={800} height={500} src="http://ghchart.rshah.org/2016rshah" alt="2016rshah's Github chart" /> */}
+        {/* hideTotalCount  隐藏总数 hideMonthLabels日历标签 */}
+        <GitHubCalendar username="changmen1" fontSize={12} hideTotalCount={true} hideMonthLabels={false} hideColorLegend={false} colorScheme="light" year={2025} blockSize={10} />
       </div>
       {/* 个人简介 */}
       <div className="text-black tracking-[1px] text-left w-full mx-auto p-0 text-sm font-normal leading-[24px] block">

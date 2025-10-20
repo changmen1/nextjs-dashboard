@@ -23,9 +23,6 @@ importers:
       clsx:
         specifier: ^2.1.1
         version: 2.1.1
-      github-calendar:
-        specifier: ^2.3.4
-        version: 2.3.4
       next:
         specifier: 16.0.0-canary.3
         version: 16.0.0-canary.3(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
@@ -44,6 +41,9 @@ importers:
       react-dom:
         specifier: latest
         version: 19.1.0(react@19.1.0)
+      react-github-calendar:
+        specifier: ^4.5.11
+        version: 4.5.11(react@19.1.0)
       tailwindcss:
         specifier: 3.4.17
         version: 3.4.17
@@ -348,9 +348,6 @@ packages:
   abbrev@1.1.1:
     resolution: {integrity: sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q==}
 
-  add-subtract-date@1.0.16:
-    resolution: {integrity: sha512-pmGFYgOmVhZ7R47PB/h/BLt/f77rVZL3WXvxSUWKSd6RTe7lHu7ZalQUYWJ2RXNIuv9KKZjstyuKnNQqbqtoGw==}
-
   agent-base@6.0.2:
     resolution: {integrity: sha512-RZNwNclF7+MS/8bDg70amg32dyeZGZxiDuQmZxKLAlQjr3jGyLx+4Kkk58UO7D2QdgFIQCovuSuZESne6RG6XQ==}
     engines: {node: '>= 6.0.0'}
@@ -481,9 +478,8 @@ packages:
   csstype@3.1.3:
     resolution: {integrity: sha512-M1uQkMl8rQK/szD0LNhtqxIPLpimGm8sOBwU7lLnCpSbTyY3yeU1Vc7l4KT5zT4s/yOxHH5O7tIuuLOCnLADRw==}
 
-  days@1.1.1:
-    resolution: {integrity: sha512-vzeIwVsEIyA35GH4+mPd4hjVDNI87wYANyZFs0BHjBr5kIBH5zEl7LfD6Wr4SFZca4D3CU9IH1w4DuZLlXzKRw==}
-    engines: {node: '>=0.10.0'}
+  date-fns@4.1.0:
+    resolution: {integrity: sha512-Ukq0owbQXxa/U3EGtsdVBkR1w7KOQ5gIBqdH2hkvknzZPYvBxb/aa6E8L7tmjFtkwZBu3UXBbjIgPo/Ez4xaNg==}
 
   debug@4.4.1:
     resolution: {integrity: sha512-KcKCqiftBJcZr++7ykoDIEwSa3XWowTfNPo92BYxjXiyYEVrUQh2aLyhxBCwww+heortUFxEJYcRzosstTEBYQ==}
@@ -517,9 +513,6 @@ packages:
   electron-to-chromium@1.5.155:
     resolution: {integrity: sha512-ps5KcGGmwL8VaeJlvlDlu4fORQpv3+GIcF5I3f9tUKUlJ/wsysh6HU8P5L1XWRYeXfA0oJd4PyM8ds8zTFf6Ng==}
 
-  elly@1.1.11:
-    resolution: {integrity: sha512-WFKVcEKEOjdSOhNYFKWQoJDk0Sb0re6v0fIsGkePn97dmPpKM/YoOKRdYIb34T1R13KPRNzDBDmT/Flb/54NXg==}
-
   emoji-regex@8.0.0:
     resolution: {integrity: sha512-MSjYzcWNOA0ewAHpz0MxpYFvwg6yjy1NG3xteoqz644VCo/RPgnr1/GGt+ic3iJTzQ8Eu3TdM14SawnVUmGE6A==}
 
@@ -541,15 +534,9 @@ packages:
     resolution: {integrity: sha512-YsGpe3WHLK8ZYi4tWDg2Jy3ebRz2rXowDxnld4bkQB00cc/1Zw9AWnC0i9ztDJitivtQvaI9KaLyKrc+hBW0yg==}
     engines: {node: '>=8'}
 
-  fillo@1.0.15:
-    resolution: {integrity: sha512-AU9+1s5J2halrmGGe9On+a8TXfbaXsY9JLz/sxPsmcISaqcGn0M9Pt6cQzKPesqdzQdSQ08JJHH5RZR9HdF2Jw==}
-
   foreground-child@3.3.1:
     resolution: {integrity: sha512-gIXjKqtFuWEgzFRJA9WCQeSJLZDjgJUOMCMzxtvFq/37KojM1BFGufqsCy0r4qSQmYLsZYMeyRqzIWOMup03sw==}
     engines: {node: '>=14'}
-
-  formatoid@1.2.5:
-    resolution: {integrity: sha512-ADuqDTwrQd0800jF0G6tL3mWwO8aGStjypqvrwkhTnoQc2fD1hc9reGtrMiRmWK7ti1n2NUfy+6WKfJ+AJUsvA==}
 
   fraction.js@4.3.7:
     resolution: {integrity: sha512-ZsDfxO51wGAXREY55a7la9LScWpwv9RxIrYABrlvOFBlH/ShPnrtsXeuUIfXKKOVicNxQ+o8JTbJvjS4M89yew==}
@@ -573,15 +560,6 @@ packages:
     resolution: {integrity: sha512-+5J6MS/5XksCuXq++uFRsnUd7Ovu1XenbeuIuNRJxYWjgQbPuFhT14lAvsWfqfAmnwluf1OwMjz39HjfLPci0Q==}
     engines: {node: '>=10'}
     deprecated: This package is no longer supported.
-
-  github-calendar-legend@1.0.12:
-    resolution: {integrity: sha512-dVsVt22egxG3VEkJdQTdgphQkDj4FyQ1Sen4o4GteEz4SA7s2rX9j2fDR46fZaPLU8IXfL4Ig0h3z/zmb6ORWA==}
-
-  github-calendar-parser@1.2.3:
-    resolution: {integrity: sha512-yd7GcKibU01nfD82h5dxLVUOaNDySABhYN/Y29OP1p03h38UpJxy23qe2hheIHbtZAwvQ15ErPAapgVGXmbYnQ==}
-
-  github-calendar@2.3.4:
-    resolution: {integrity: sha512-B2szQw0xVOluHYeuamkVtJXCHk5TaVyPjw2z4ynfnGlQ/jr2cb66SPgeNDcDHlGONOipQccWxv/VNVN5Gqr14A==}
 
   glob-parent@5.1.2:
     resolution: {integrity: sha512-AOIgSQCepiJYwP3ARnGx+5VnTu2HBYdzbGP45eLw1vr3zB3vZLeyed1sC9hnbcOc9/SrMyM5RPQrkGz4aS9Zow==}
@@ -643,9 +621,6 @@ packages:
 
   isexe@2.0.0:
     resolution: {integrity: sha512-RHxMLp9lnKHGHRng9QFhRCMbYAcVpn69smSGcq3f36xjgVVWThj4qqLbTLlq7Ssj8B+fIQ1EuCEGI2lKsyQeIw==}
-
-  iterate-object@1.3.5:
-    resolution: {integrity: sha512-eL23u8oFooYTq6TtJKjp2RYjZnCkUYQvC0T/6fJfWykXJ3quvdDdzKZ3CEjy8b3JGOvLTjDYMEMIp5243R906A==}
 
   jackspeak@3.4.3:
     resolution: {integrity: sha512-OGlZQpz2yfahA/Rd1Y8Cd9SIEsqvXkLVoSw/cgwhnhFMDbsQFeZYoJJ7bIZBS9BcamUW96asq/npPWugM+RQBw==}
@@ -710,10 +685,6 @@ packages:
     resolution: {integrity: sha512-vVqVZQyf3WLx2Shd0qJ9xuvqgAyKPLAiqITEtqW0oIUjzo3PePDd6fW9iFz30ef7Ysp/oiWqbhszeGWW2T6Gzw==}
     engines: {node: '>=10'}
     hasBin: true
-
-  months@1.2.0:
-    resolution: {integrity: sha512-zFM7hUpziSYGk2DNObYGWgHdRRxAOgjl8CC1Rbl50p/q0rGDsREfk0nbxxmSIquVi/lEAuUY8nwbwkZ8biNCOQ==}
-    engines: {node: '>=0.10.0'}
 
   ms@2.1.3:
     resolution: {integrity: sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==}
@@ -812,9 +783,6 @@ packages:
   package-json-from-dist@1.0.1:
     resolution: {integrity: sha512-UEZIS3/by4OC8vL3P2dTXRETpebLI2NiI5vIrjaD/5UtrkFX/tNbwjTSRAGC/+7CAo2pIcBaRgWmcBBHcsaCIw==}
 
-  parse-it@1.0.11:
-    resolution: {integrity: sha512-1OWDPQNF7eUxkqPdP4vFu96QnVwQjy2zag5CZcF3Ipd12s1iu8nPpgNBsda0tgZlj04vSrIZ5DQr2bqp5Cn6UQ==}
-
   path-is-absolute@1.0.1:
     resolution: {integrity: sha512-AVbw3UJ2e9bq64vSaS9Am0fje1Pa8pbGqTTsmXfaIiMpnr5DlDhfJOuLj9Sf95ZPVDAUerDfEk88MPmPe7UCQg==}
     engines: {node: '>=0.10.0'}
@@ -908,10 +876,20 @@ packages:
   queue-microtask@1.2.3:
     resolution: {integrity: sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A==}
 
+  react-activity-calendar@2.7.15:
+    resolution: {integrity: sha512-sPO4tDJp+sRbV8F/LhUZ/woHmi4dg0Phd+Kt1Jw0orSfGfEqGCm7fFXiTIAvuuAwpwxqPEYEnfNzOLEfUrdg1A==}
+    peerDependencies:
+      react: ^18.0.0 || ^19.0.0
+
   react-dom@19.1.0:
     resolution: {integrity: sha512-Xs1hdnE+DyKgeHJeJznQmYMIBG3TKIHJJT95Q58nHLSrElKlGQqDTR2HQ9fx5CN/Gk6Vh/kupBTDLU11/nDk/g==}
     peerDependencies:
       react: ^19.1.0
+
+  react-github-calendar@4.5.11:
+    resolution: {integrity: sha512-tDUjAIYILYtPmPUrA/KKuCcGY9A0PcRQEjnOGcAoqV2qeaibh3IQ+YznQOYr78PsBfLIVtq4nZYYM3QadjGu+Q==}
+    peerDependencies:
+      react: ^18.0.0 || ^19.0.0
 
   react@19.1.0:
     resolution: {integrity: sha512-FS+XFBNvn3GTAWq26joslQgWNoFu08F4kl0J4CgdNKADkdSGXQyTCnKteIAJy96Br6YbpEU1LSzV5dYtjMkMDg==}
@@ -927,9 +905,6 @@ packages:
   readdirp@3.6.0:
     resolution: {integrity: sha512-hOS089on8RduqdbhvQ5Z37A0ESjsqz6qnRcffsMU3495FuTdqSm+7bhJ29JvIOsBDEEnan5DPu9t3To9VRlMzA==}
     engines: {node: '>=8.10.0'}
-
-  regex-escape@3.4.11:
-    resolution: {integrity: sha512-051l4Hl/0HoJwTvNztrWVjoxLiseSfCrDgWqwR1cnGM/nyQSeIjmvti5zZ7HzOmsXDPaJ2k0iFxQ6/WNpJD5wQ==}
 
   resolve@1.22.10:
     resolution: {integrity: sha512-NPRy+/ncIMeDlTAsuqwKIiferiawhefFJtkNSW0qZJEqMEb+qBt/77B/jGeeek+F0uOeN05CDa6HXbbIgtVX4w==}
@@ -984,9 +959,6 @@ packages:
   signal-exit@4.1.0:
     resolution: {integrity: sha512-bzyZ1e88w9O1iNJbKnOlvYTrWPDl46O1bG0D3XInv+9tkPrxrN8jUUTiFlDkkmKWgn1M6CfIA13SuGqOa9Korw==}
     engines: {node: '>=14'}
-
-  sliced@1.0.1:
-    resolution: {integrity: sha512-VZBmZP8WU3sMOZm1bdgTadsQbcscK0UM8oKxKVBs4XAhUo2Xxzm/OFMGBkPusxw9xL3Uy8LrzEqGqJhclsr0yA==}
 
   source-map-js@1.2.1:
     resolution: {integrity: sha512-UXWMKhLOwVKb728IUtQPXxfYU+usdybtUrK/8uGE8CQMvrhOpwvzDBwj0QhSL7MQc7vIsISBG8VQ8+IDQxpfQA==}
@@ -1346,8 +1318,6 @@ snapshots:
 
   abbrev@1.1.1: {}
 
-  add-subtract-date@1.0.16: {}
-
   agent-base@6.0.2:
     dependencies:
       debug: 4.4.1
@@ -1470,7 +1440,7 @@ snapshots:
 
   csstype@3.1.3: {}
 
-  days@1.1.1: {}
+  date-fns@4.1.0: {}
 
   debug@4.4.1:
     dependencies:
@@ -1490,11 +1460,6 @@ snapshots:
   eastasianwidth@0.2.0: {}
 
   electron-to-chromium@1.5.155: {}
-
-  elly@1.1.11:
-    dependencies:
-      iterate-object: 1.3.5
-      sliced: 1.0.1
 
   emoji-regex@8.0.0: {}
 
@@ -1518,19 +1483,10 @@ snapshots:
     dependencies:
       to-regex-range: 5.0.1
 
-  fillo@1.0.15: {}
-
   foreground-child@3.3.1:
     dependencies:
       cross-spawn: 7.0.6
       signal-exit: 4.1.0
-
-  formatoid@1.2.5:
-    dependencies:
-      days: 1.1.1
-      fillo: 1.0.15
-      months: 1.2.0
-      parse-it: 1.0.11
 
   fraction.js@4.3.7: {}
 
@@ -1556,19 +1512,6 @@ snapshots:
       string-width: 4.2.3
       strip-ansi: 6.0.1
       wide-align: 1.1.5
-
-  github-calendar-legend@1.0.12: {}
-
-  github-calendar-parser@1.2.3:
-    dependencies:
-      github-calendar-legend: 1.0.12
-
-  github-calendar@2.3.4:
-    dependencies:
-      add-subtract-date: 1.0.16
-      elly: 1.1.11
-      formatoid: 1.2.5
-      github-calendar-parser: 1.2.3
 
   glob-parent@5.1.2:
     dependencies:
@@ -1636,8 +1579,6 @@ snapshots:
 
   isexe@2.0.0: {}
 
-  iterate-object@1.3.5: {}
-
   jackspeak@3.4.3:
     dependencies:
       '@isaacs/cliui': 8.0.2
@@ -1689,8 +1630,6 @@ snapshots:
       yallist: 4.0.0
 
   mkdirp@1.0.4: {}
-
-  months@1.2.0: {}
 
   ms@2.1.3: {}
 
@@ -1765,10 +1704,6 @@ snapshots:
       wrappy: 1.0.2
 
   package-json-from-dist@1.0.1: {}
-
-  parse-it@1.0.11:
-    dependencies:
-      regex-escape: 3.4.11
 
   path-is-absolute@1.0.1: {}
 
@@ -1845,10 +1780,20 @@ snapshots:
 
   queue-microtask@1.2.3: {}
 
+  react-activity-calendar@2.7.15(react@19.1.0):
+    dependencies:
+      date-fns: 4.1.0
+      react: 19.1.0
+
   react-dom@19.1.0(react@19.1.0):
     dependencies:
       react: 19.1.0
       scheduler: 0.26.0
+
+  react-github-calendar@4.5.11(react@19.1.0):
+    dependencies:
+      react: 19.1.0
+      react-activity-calendar: 2.7.15(react@19.1.0)
 
   react@19.1.0: {}
 
@@ -1865,8 +1810,6 @@ snapshots:
   readdirp@3.6.0:
     dependencies:
       picomatch: 2.3.1
-
-  regex-escape@3.4.11: {}
 
   resolve@1.22.10:
     dependencies:
@@ -1933,8 +1876,6 @@ snapshots:
   signal-exit@3.0.7: {}
 
   signal-exit@4.1.0: {}
-
-  sliced@1.0.1: {}
 
   source-map-js@1.2.1: {}
 
