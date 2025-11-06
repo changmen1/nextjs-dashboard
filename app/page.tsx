@@ -5,7 +5,6 @@
  */
 // https://community.vercel.com/t/deployment-failed/25402
 // https://grubersjoe.github.io/react-github-calendar/#/?user=changmen1
-import Image from "next/image"
 import GitHubCalendar from 'react-github-calendar';
 
 export default function Page() {
@@ -54,7 +53,7 @@ export default function Page() {
       </div>
       {/* 个人简介 */}
       <div className="text-black tracking-[1px] text-left w-full mx-auto p-0 text-sm font-normal leading-[24px] block">
-        &emsp;&emsp;主攻前端方向，可用java做接口开发，不希望过于依赖别人，即使没有设计没有产品，我依然想要把产品做到完美，毕竟全栈才能最高效的解决问题，在遇到技术问题我会去github查看issues，或是去google，stackoverflow寻找答案，但问题通常不一定有人遇到，或已被解决，所以熟练的阅读官方源码，查看手册，或是自己实验才是最终解决问题的办法，相信事实的结果需要动手去做！
+        &emsp;&emsp;主攻前端方向，会使用java做接口开发，不希望过于依赖别人，即使没有设计没有产品，我依然想要把产品做到完美，毕竟全栈才能最高效的解决问题，在遇到技术问题我会去github查看issues，或是去google，stackoverflow寻找答案，但问题通常不一定有人遇到，或已被解决，所以熟练的阅读官方源码，查看手册，或是自己实验才是最终解决问题的办法，相信事实的结果需要动手去做！
       </div>
       {/* 社交信息 */}
       <div className="w-full max-w-full mx-auto">
@@ -78,7 +77,7 @@ export default function Page() {
         </div>
       </div>
       {/* 教育经历 */}
-      <div className="w-full max-w-full mx-auto">
+      {/* <div className="w-full max-w-full mx-auto">
         <div className="text-[rgba(0,0,0,0.88)] text-start border-b-2 border-[rgba(0,0,0,0.88)] my-2 mb-1 text-[18px] font-semibold leading-[32px]">
           教育经历
         </div>
@@ -102,7 +101,7 @@ export default function Page() {
             机械工程
           </div>
         </div>
-      </div>
+      </div> */}
       {/* 技术栈 */}
       <div className="w-full max-w-full mx-auto">
         <div className="text-[rgba(0,0,0,0.88)] text-start border-b-2 border-[rgba(0,0,0,0.88)] my-2 mb-1 text-[18px] font-semibold leading-[32px]">
