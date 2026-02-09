@@ -53,7 +53,10 @@ export default function Page() {
       </div>
       {/* 个人简介 */}
       <div className="text-black tracking-[1px] text-left w-full mx-auto p-0 text-sm font-normal leading-[24px] block">
-        &emsp;&emsp;主攻前端方向，会使用java做接口开发，不希望过于依赖别人，即使没有设计没有产品，我依然想要把产品做到完美，毕竟全栈才能最高效的解决问题，在遇到技术问题我会去github查看issues，或是去google，stackoverflow寻找答案，但问题通常不一定有人遇到，或已被解决，所以熟练的阅读官方源码，查看手册，或是自己实验才是最终解决问题的办法，相信事实的结果需要动手去做！
+        &emsp;&emsp;<strong>4年研发一线深耕</strong>，具备成熟的 2B/2C 大规模复杂业务实战背景，深度践行 <strong>React + TypeScript</strong> 架构体系。
+        持<strong>“产品驱动型开发”</strong>理念，具备从需求拆解、交互设计到全栈交付的闭环能力，追求在最小依赖下实现产品价值的最大化。
+        面对深层技术挑战，不局限于常规文档，更擅长通过<strong>研读框架源码、追踪 Issues 底层逻辑及逆向实验</strong>寻找终极解决方案。
+        推崇<strong>“知行合一”</strong>，坚信卓越的工程实践应始于对底层原理的敬畏，归于对交付结果的极致交付。
       </div>
       {/* 社交信息 */}
       <div className="w-full max-w-full mx-auto">
@@ -105,18 +108,23 @@ export default function Page() {
       {/* 技术栈 */}
       <div className="w-full max-w-full mx-auto">
         <div className="text-[rgba(0,0,0,0.88)] text-start border-b-2 border-[rgba(0,0,0,0.88)] my-2 mb-1 text-[18px] font-semibold leading-[32px]">
-          技术栈
+          相关技能
         </div>
         <ul className="list-disc list-outside pl-[20px]">
-          <li>熟悉 <span className="text-black font-semibold">h5</span> / <span className="text-black font-semibold">JS</span> / TS / <span className="text-black font-semibold">CSS</span> / <span className="text-black font-semibold">Java</span> / go / Dart</li>
-          <li>熟悉 <span className="text-black font-semibold">webApi</span></li>
-          <li>熟悉 <span className="text-black font-semibold">React</span> / <span className="text-black font-semibold">Angular</span> / Vue / <span className="text-black font-semibold">Jquery</span></li>
-          <li>熟悉 <span className="text-black font-semibold">taro</span> / <span className="text-black font-semibold">微信原生</span> / uniapp / <span className="text-black font-semibold">Flutter</span></li>
-          <li>熟悉 <span className="text-black font-semibold">Electron</span> / <span className="text-black font-semibold">Tauri</span></li>
-          <li>熟悉 springboot mybatis-plus mysql redis</li>
-          <li>熟悉 <span className="text-black font-semibold">Antdesign</span>/ <span className="text-black font-semibold">Antdesign Pro</span> / <span className="text-black font-semibold">scanUi</span> / Mui / <span className="text-black font-semibold">vuetify</span> / Element</li>
-          <li>熟悉 git github gitlab </li>
-          <li>开源精神 开源基于本地客户端<span className="text-black font-semibold">AI对话工具</span>，本地客户端单片机温湿度检测工具，为<span className="text-black font-semibold">antdesignPro，afilmory，yatori-go-core贡献PR</span></li>
+          <li>
+            深度实践 <span className="text-[#e72326] font-semibold">React + TypeScript</span> 及
+            <span className="text-[#e72326] font-semibold">React Native + TypeScript</span>，覆盖 2B / 2C 复杂业务与架构设计，
+            具备 <span className="text-[#e72326] font-semibold">Web / RN / Taro / Electron / Tauri</span> 多端落地能力。
+          </li>
+          <li>
+            独立开发 <span className="text-[#e72326] font-semibold">罗非鱼低码平台</span>，
+            维护基于 <span className="text-[#e72326] font-semibold">React + TS + TailwindCSS + MUI</span> 的
+            <span className="text-[#e72326] font-semibold">Electron 工程化脚手架</span>，
+            并实现 <span className="text-[#e72326] font-semibold">串口通信温湿度监测客户端</span>。
+            曾为 <span className="text-[#e72326] font-semibold">Ant Design Pro</span>、
+            <span className="text-[#e72326] font-semibold">afilmory</span>、
+            <span className="text-[#e72326] font-semibold">yatori-go-core</span> 提交 PR。
+          </li>
         </ul>
       </div>
       {/* 项目经历 */}
@@ -124,29 +132,75 @@ export default function Page() {
         <div className="text-[rgba(0,0,0,0.88)] text-start border-b-2 border-[rgba(0,0,0,0.88)] my-2 mb-1 text-[18px] font-semibold leading-[32px]">
           项目经历
         </div>
-        <div>
+        {/* 黄疸管家项目经历 */}
+        <div className="mt-8">
           <div className="text-[rgba(0,0,0,0.88)] mt-4 text-lg font-bold leading-8">
-            ICU重症系统 NICU重症系统
-            <a href="https://github.com/changmen1" target="_blank" className="underline ml-[20px] text-[15px] font-bold">https://github.com/changmen1</a>
+            黄疸管家（用户端 / 医生端）
           </div>
           <div className="text-[rgba(0,0,0,0.88)] mt-1 text-lg font-bold leading-8">
             角色
           </div>
-          <div>ICU重症系统后台管理的 <span className="text-black font-semibold">前端技术负责人</span> </div>
+          <div>该项目的 <span className="text-[#e72326] font-semibold">主Owner & 独立开发者</span>（负责架构设计与双端全量开发）</div>
+
           <div className="text-[rgba(0,0,0,0.88)] mt-1 text-lg font-bold leading-8">
             行动
           </div>
-          <div>完成对ICU科室的医疗设备系统录入、病人生命体征检测、通过<span className="text-black font-semibold">AI进行病情分析</span>、减轻护士工作</div>
-          <div>完成ICU科室对<span className="text-black font-semibold">体温单</span>、<span className="text-black font-semibold">重症单</span>、血滤单等文书文书表单提出的<span className="text-black font-semibold">定制化开发</span></div>
-          <div>完成<span className="text-black font-semibold">戴小维AI模块对接</span></div>
+          <div>基于 <span className="text-[#e72326] font-semibold">ReactNative</span> 实现跨平台开发，通过 <span className="text-[#e72326] font-semibold">WiFi 与 TCP 协议</span> 直接对接医疗设备，建立稳定通信链路</div>
+          <div>实现设备数据的实时上报与处理，针对 <span className="text-[#e72326] font-semibold">历史报警数据</span> 进行了毫秒级监测与可视化图表展示</div>
+          <div>深度集成 <span className="text-[#e72326] font-semibold">腾讯云 IM</span>，实现用户与医生间的图文、语音实时问诊，并完成 <span className="text-[#e72326] font-semibold">TPNS 离线推送</span> 优化，确保消息触达率</div>
+          <div>完成 <span className="text-[#e72326] font-semibold">支付宝 SDK</span> 集成，构建完整的设备租赁业务流（下单、支付、押金退还）</div>
+          <div>利用 <span className="text-[#e72326] font-semibold">Yoga 布局引擎</span> 与高度解耦的组件化方案，确保了复杂医疗数据在不同机型上的渲染一致性</div>
+
+          <div className="text-[rgba(0,0,0,0.88)] mt-1 text-lg font-bold leading-8">
+            结果
+          </div>
+          <div><span className="text-[#e72326] font-semibold">独立完成</span> 了从 0 到 1 的研发闭环，支撑了医疗器械厂家从传统硬件向“硬件+服务”模式的数字化转型</div>
+          <div>成功解决了移动端在 TCP 长连接下的 <span className="text-[#e72326] font-semibold">断线重连、粘包处理</span> 等关键技术难点，保障了医疗监测数据的零丢失</div>
+          <div>通过抽象 IM 与支付通用模块，使后续关联项目的开发效率提升了 <span className="text-[#e72326] font-semibold">40% 以上</span></div>
+        </div>
+        <div>
+          <div className="text-[rgba(0,0,0,0.88)] mt-4 text-lg font-bold leading-8">
+            ICU重症系统 NICU重症系统
+          </div>
+          <div className="text-[rgba(0,0,0,0.88)] mt-1 text-lg font-bold leading-8">
+            角色
+          </div>
+          <div>ICU重症系统后台管理的 <span className="text-[#e72326] font-semibold">前端技术负责人</span> </div>
+          <div className="text-[rgba(0,0,0,0.88)] mt-1 text-lg font-bold leading-8">
+            行动
+          </div>
+          <div>完成对ICU科室的医疗设备系统录入、病人生命体征检测、通过<span className="text-[#e72326] font-semibold">AI进行病情分析</span>、减轻护士工作</div>
+          <div>完成ICU科室对<span className="text-[#e72326] font-semibold">体温单</span>、<span className="text-[#e72326] font-semibold">重症单</span>、血滤单等文书文书表单提出的<span className="text-[#e72326] font-semibold">定制化开发</span></div>
+          <div>完成<span className="text-[#e72326] font-semibold">戴小维AI模块对接</span></div>
           <div>完成与设备解析-对接婴儿培养箱-输注泵-监护仪-呼吸机-等设备 对数据进行检测</div>
           <div>...</div>
           <div className="text-[rgba(0,0,0,0.88)] mt-1 text-lg font-bold leading-8">
             结果
           </div>
           <div>成功落地浙江省多家医院</div>
-          <div><span className="text-black font-semibold">产出了部门内部高移植性、与 UI 层高解耦、高扩展性的三测单、体温单、重症单、AI模块组件，可在各大关联业务中极速引入、扩展、定制</span></div>
+          <div><span className="text-[#e72326] font-semibold">产出了部门内部高移植性、与 UI 层高解耦、高扩展性的三测单、体温单、重症单、AI模块组件，可在各大关联业务中极速引入、扩展、定制</span></div>
           <div>集团内目前唯一提交商业化的软件项目</div>
+        </div>
+        {/* 互联网医院项目经历 */}
+        <div className="mt-8">
+          <div className="text-[rgba(0,0,0,0.88)] mt-4 text-lg font-bold leading-8"> 互联网医院数字化平台（公众号/小程序/Web双端） </div> <div className="text-[rgba(0,0,0,0.88)] mt-1 text-lg font-bold leading-8"> 角色 </div> <div>该项目的 <span className="text-[#e72326] font-semibold">核心开发者</span>（主导前端整体架构设计与全业务流程实现）</div>
+          <div className="text-[rgba(0,0,0,0.88)] mt-1 text-lg font-bold leading-8"> 行动 </div> <div>基于 <span className="text-[#e72326] font-semibold">React + TailwindCSS + Umi</span> 搭建高性能前端架构，深度对接 <span className="text-[#e72326] font-semibold">阿里 RTC</span> 实现低延迟、高可靠的远程音视频问诊功能</div> <div>利用 <span className="text-[#e72326] font-semibold">WebSocket</span> 协议构建实时通讯链路，配合 <span className="text-[#e72326] font-semibold">微信 SDK</span> 完成公众号与小程序之间的无缝跳转、微信支付及静默授权流程</div> <div>针对医疗场景抽象并封装了 <span className="text-[#e72326] font-semibold">通用业务组件库</span>（涵盖音视频通话插件、复杂文件上传、多端适配弹窗等），极大地提升了研发复用率</div> <div>通过 <span className="text-[#e72326] font-semibold">Nginx 反向代理与 Hosts 模拟 HTTPS 环境</span>，解决了本地开发环境与微信线上安全域名限制的调试冲突</div>
+          <div className="text-[rgba(0,0,0,0.88)] mt-1 text-lg font-bold leading-8"> 结果 </div> <div>支撑了甘肃医学院附属医院互联网化转型，实现了 <span className="text-[#e72326] font-semibold">从挂号到线上问诊、支付的闭环全流程</span></div> <div>通过组件化重构，使业务响应速度提升，核心页面加载性能优化了 <span className="text-[#e72326] font-semibold">30% 以上</span></div> <div>成功保障了高并发场景下音视频通话的稳定性，实现了问诊消息的 <span className="text-[#e72326] font-semibold">毫秒级触达</span></div>
+        </div>
+        {/* WebHis项目经历 */}
+        <div className="mt-8"> <div className="text-[rgba(0,0,0,0.88)] mt-4 text-lg font-bold leading-8"> WebHis 靖远县基层医疗卫生信息平台 </div> <div className="text-[rgba(0,0,0,0.88)] mt-1 text-lg font-bold leading-8"> 角色 </div> <div>前端 <span className="text-[#e72326] font-semibold">核心开发成员</span>（负责核心业务流开发与复杂医保数据交互）</div>
+          <div className="text-[rgba(0,0,0,0.88)] mt-1 text-lg font-bold leading-8"> 行动 </div> <div>基于 <span className="text-[#e72326] font-semibold">React + Ant Design Pro + ahooks</span> 构建 B 端管理系统，处理门诊医生工作站、收费管理、药品进销存等超大型高频业务模块</div> <div>深度集成 <span className="text-[#e72326] font-semibold">医保报销接口</span>，实现了复杂的医保患者授权、对账、退费逻辑，确保财务数据的绝对准确性</div> <div>针对 <span className="text-[#e72326] font-semibold">海量药品进销存数据</span>，设计了高效的表单预加载方案与前端过滤算法，显著降低了长列表渲染压力</div> <div>利用 <span className="text-[#e72326] font-semibold">TypeScript</span> 建立严密的业务数据模型，通过静态类型检查规避了复杂处方逻辑中的潜在风险</div>
+          <div className="text-[rgba(0,0,0,0.88)] mt-1 text-lg font-bold leading-8"> 结果 </div> <div>该系统覆盖了靖远县多家基层医疗机构，成功支撑了 <span className="text-[#e72326] font-semibold">日均万级</span> 的处方流转与医保结算</div> <div>通过精细化权限配置模块，实现了 <span className="text-[#e72326] font-semibold">RBAC 级别</span> 的动态菜单与按钮级权限控制</div> <div>提升了基层医疗机构的数字化协同效率，药品盘点准确率达到 <span className="text-[#e72326] font-semibold">100%</span></div>
+        </div>
+        {/* 自助机项目经历 */}
+        <div className="mt-8"> <div className="text-[rgba(0,0,0,0.88)] mt-4 text-lg font-bold leading-8"> 甘肃中医药大学附属医院 - 智能自助终端系统 </div> <div className="text-[rgba(0,0,0,0.88)] mt-1 text-lg font-bold leading-8"> 角色 </div> <div><span className="text-[#e72326] font-semibold">Hybrid 混合开发主程</span>（负责硬件交互层与 H5 业务层通信）</div>
+          <div className="text-[rgba(0,0,0,0.88)] mt-1 text-lg font-bold leading-8"> 行动 </div> <div>采用 <span className="text-[#e72326] font-semibold">CefSharp (WinForm + Chromium)</span> 架构，实现了 H5 业务界面与 C# 底层硬件驱动（读卡器、身份证识别、打印机）的深度解耦与双向通信</div> <div>基于 <span className="text-[#e72326] font-semibold">jQuery + EasyUI</span> 优化自助机端的交互性能，通过重写原生 JavaScript 事件处理机制，解决了触屏点击延迟与重复提交问题</div> <div>独立完成 <span className="text-[#e72326] font-semibold">床旁结算与门诊缴费</span> 核心链路，通过 JSBridge 协议实现了身份证手输与物理读取的逻辑兼容</div>
+          <div className="text-[rgba(0,0,0,0.88)] mt-1 text-lg font-bold leading-8"> 结果 </div> <div>成功在甘肃中医药大学附属医院部署多台设备，有效缓解了门诊窗口排队压力，窗口排队时间平均减少 <span className="text-[#e72326] font-semibold">50% 以上</span></div> <div>成功解决混合开发中内存泄露与白屏卡死等性能顽疾，确保系统 <span className="text-[#e72326] font-semibold">7*24小时</span> 稳定运行</div>
+        </div>
+        {/* 门户网站项目经历 */}
+        <div className="mt-8"> <div className="text-[rgba(0,0,0,0.88)] mt-4 text-lg font-bold leading-8"> 官网集群及可视化 CMS 管理平台 </div> <div className="text-[rgba(0,0,0,0.88)] mt-1 text-lg font-bold leading-8"> 角色 </div> <div><span className="text-[#e72326] font-semibold">核心开发成员</span>（负责前台门户展示及后台配置系统）</div>
+          <div className="text-[rgba(0,0,0,0.88)] mt-1 text-lg font-bold leading-8"> 行动 </div> <div>使用 <span className="text-[#e72326] font-semibold">Vue2 + TypeScript + Element UI</span> 打造高灵活性的后台管理平台，实现医院科室、专家团队及健康教育板块的高度可配置化</div> <div>前端基于 <span className="text-[#e72326] font-semibold">Bootstrap</span> 实现响应式布局，通过 CSS 媒体查询与流式布局技术，保障了在不同分辨率显示器下的视觉一致性</div> <div>针对“图文咨询”与“名医讲堂”模块，封装了高性能的富文本编辑器与多媒体展示组件，提升了信息发布的时效性</div>
+          <div className="text-[rgba(0,0,0,0.88)] mt-1 text-lg font-bold leading-8"> 结果 </div> <div>项目上线后成为医院对外展示的核心窗口，实现了 <span className="text-[#e72326] font-semibold">SEO 性能优化</span>，关键词搜索排名显著提升</div> <div>通过 CMS 系统赋能，行政人员维护内容的人效提升了 <span className="text-[#e72326] font-semibold">60%</span></div>
         </div>
       </div>
       {/* 工作经历 */}
