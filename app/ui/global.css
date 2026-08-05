@@ -31,11 +31,74 @@ input[type='number']::-webkit-outer-spin-button {
 
 html {
   font-size: 14px;
-  line-height: 1.5;
-  letter-spacing: 1px;
-  color: #333;
+  line-height: 1.65;
+  letter-spacing: 0.02em;
+  color: #303936;
 }
 
 a {
-  color: #0ea5e9;
+  color: #25685d;
+}
+
+body {
+  min-height: 100vh;
+  padding-bottom: 40px;
+  background:
+    radial-gradient(circle at 15% 0%, rgba(181, 79, 50, 0.16), transparent 30rem),
+    #202321;
+}
+
+/* 简历主体继续保持白纸结构，只增加轻边框和阴影，方便 HR 长时间阅读。 */
+.resume-page {
+  color: #303936;
+  border: 1px solid #e4dfd6;
+  border-radius: 14px;
+  background: #fffdf9;
+  box-shadow: 0 22px 65px rgba(0, 0, 0, 0.28);
+}
+
+.resume-page strong {
+  color: #214d45;
+}
+
+/* 原简历的高亮色统一压低饱和度，重点仍然醒目，但不会像营销页面一样抢眼。 */
+.resume-page [class*="text-[#e72326]"] {
+  color: #b54f32 !important;
+}
+
+.resume-page [class*="border-[rgba(0,0,0,0.88)]"] {
+  color: #29453f !important;
+  border-color: #627a73 !important;
+}
+
+@media (max-width: 640px) {
+  body {
+    padding-bottom: 0;
+  }
+
+  .resume-page {
+    margin-top: 0;
+    padding: 20px;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .resume-page a {
+    overflow: visible !important;
+    overflow-wrap: anywhere;
+  }
+}
+
+@media print {
+  body {
+    padding: 0;
+    background: #fff;
+  }
+
+  .resume-page {
+    margin-top: 0;
+    border: 0;
+    box-shadow: none;
+  }
 }

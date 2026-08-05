@@ -1,5 +1,5 @@
 import "@/app/ui/global.css"
-import { inter } from '@/app/ui/fonts';
+import { notoSansSc } from '@/app/ui/fonts';
 
 export default function RootLayout({
   children,
@@ -7,8 +7,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body style={{ background: "#1f1e1f" }} className={`${inter.className} antialiased`}>{children}</body>
+    <html lang="zh-CN">
+      <body className={`${notoSansSc.className} antialiased`}>{children}</body>
     </html>
   );
 }

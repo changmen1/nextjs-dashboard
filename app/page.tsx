@@ -9,14 +9,14 @@ import GitHubCalendar from 'react-github-calendar';
 
 export default function Page() {
   return (
-    <div className="relative z-[999] bg-white flex flex-col justify-center items-center gap-3 max-w-[800px] mx-auto p-[30px] mt-[40px]">
+    <div className="resume-page relative z-[999] flex flex-col justify-center items-center gap-3 max-w-[800px] mx-auto p-[30px] mt-[40px]">
       {/* 头部 */}
       <div className="flex flex-col justify-center items-center gap-y-2 w-full max-w-full mx-auto">
         <div className="text-black/88 text-center tracking-widest text-[24px] font-semibold">
           朱昕龙
         </div>
         <div className="text-[#333] text-center w-full max-w-full text-[14px] font-normal block">
-          前端开发 / 技术爱好者 / 4年经验
+          前端开发 / 全栈实践 / 4年经验
         </div>
         <div className="text-[#333] flex flex-wrap justify-center items-center gap-y-2 gap-x-5 text-[14px] font-normal">
           <div className="flex justify-center items-center gap-x-2">
@@ -110,20 +110,25 @@ export default function Page() {
         <div className="text-[rgba(0,0,0,0.88)] text-start border-b-2 border-[rgba(0,0,0,0.88)] my-2 mb-1 text-[18px] font-semibold leading-[32px]">
           相关技能
         </div>
-        <ul className="list-disc list-outside pl-[20px]">
+        <ul className="list-disc list-outside pl-[20px] space-y-1">
           <li>
-            深度实践 <span className="text-[#e72326] font-semibold">React + TypeScript</span> 及
-            <span className="text-[#e72326] font-semibold">React Native + TypeScript</span>，覆盖 2B / 2C 复杂业务与架构设计，
-            具备 <span className="text-[#e72326] font-semibold">Web / RN / Taro / Electron / Tauri</span> 多端落地能力。
+            前端以 <span className="text-[#b54f32] font-semibold">React、Next.js、TypeScript、Tailwind CSS</span> 为主，
+            具备 <span className="text-[#b54f32] font-semibold">Web / React Native / Taro / Electron / Tauri</span> 多端交付能力。
           </li>
           <li>
-            独立开发 <span className="text-[#e72326] font-semibold">罗非鱼低码平台</span>，
-            维护基于 <span className="text-[#e72326] font-semibold">React + TS + TailwindCSS + MUI</span> 的
-            <span className="text-[#e72326] font-semibold">Electron 工程化脚手架</span>，
-            并实现 <span className="text-[#e72326] font-semibold">串口通信温湿度监测客户端</span>。
-            曾为 <span className="text-[#e72326] font-semibold">Ant Design Pro</span>、
-            <span className="text-[#e72326] font-semibold">afilmory</span>、
-            <span className="text-[#e72326] font-semibold">yatori-go-core</span> 提交 PR。
+            服务端使用 <span className="text-[#b54f32] font-semibold">Node.js、NestJS、PostgreSQL、Redis、BullMQ</span>，
+            能够独立完成接口、数据模型、异步任务、权限及部署链路。
+          </li>
+          <li>
+            具备 AI 产品工程经验，使用 <span className="text-[#b54f32] font-semibold">LangChain / LangGraph</span> 编排模型任务，
+            并基于 <span className="text-[#b54f32] font-semibold">Tiptap、Mermaid、KaTeX / MathJax</span> 处理富文本、图表和公式内容。
+          </li>
+          <li>
+            独立开发 <span className="text-[#b54f32] font-semibold">深墨、罗非鱼低码平台</span>，维护
+            <span className="text-[#b54f32] font-semibold"> Electron 工程化脚手架</span>，
+            曾为 <span className="text-[#b54f32] font-semibold">Ant Design Pro</span>、
+            <span className="text-[#b54f32] font-semibold">afilmory</span>、
+            <span className="text-[#b54f32] font-semibold">yatori-go-core</span> 提交 PR。
           </li>
         </ul>
       </div>
@@ -131,6 +136,50 @@ export default function Page() {
       <div className="w-full max-w-full mx-auto">
         <div className="text-[rgba(0,0,0,0.88)] text-start border-b-2 border-[rgba(0,0,0,0.88)] my-2 mb-1 text-[18px] font-semibold leading-[32px]">
           项目经历
+        </div>
+        {/* 深墨是目前持续开发的独立产品，放在商业项目之前便于 HR 了解全栈能力。 */}
+        <div className="mt-8">
+          <div className="text-[rgba(0,0,0,0.88)] mt-4 text-lg font-bold leading-8">
+            深墨 DeepInk（AI 学术写作工作台）
+          </div>
+          <div className="text-[rgba(0,0,0,0.88)] mt-1 text-lg font-bold leading-8">
+            角色
+          </div>
+          <div>
+            该项目的 <span className="text-[#b54f32] font-semibold">独立产品开发者与全栈负责人</span>，
+            负责产品设计、前后端开发、AI 任务编排及部署维护。
+          </div>
+
+          <div className="text-[rgba(0,0,0,0.88)] mt-1 text-lg font-bold leading-8">
+            行动
+          </div>
+          <div>
+            前端基于 <span className="text-[#b54f32] font-semibold">Next.js 16、React 19、TypeScript、Tiptap</span>，
+            完成论文创建、流式生成、在线编辑、知识库与管理端等核心页面。
+          </div>
+          <div>
+            后端基于 <span className="text-[#b54f32] font-semibold">NestJS、PostgreSQL、Redis、BullMQ</span>，
+            拆分接口服务与异步任务 Worker，支撑耗时 AI 任务的排队、进度反馈、失败重试和状态恢复。
+          </div>
+          <div>
+            使用 <span className="text-[#b54f32] font-semibold">LangChain / LangGraph</span> 组织提纲、正文、知识检索与 PPT 生成流程，
+            并处理表格、图片、代码、Mermaid 图表、数学公式及 Word 导出。
+          </div>
+
+          <div className="text-[rgba(0,0,0,0.88)] mt-1 text-lg font-bold leading-8">
+            结果
+          </div>
+          <div>
+            完成了从产品设计、前后端开发到部署上线的完整闭环，系统已上线运行：
+            <a
+              href="https://deepink.imzxl.com"
+              target="_blank"
+              rel="noreferrer"
+              className="ml-1 font-semibold underline underline-offset-4"
+            >
+              https://deepink.imzxl.com
+            </a>
+          </div>
         </div>
         {/* 黄疸管家项目经历 */}
         <div className="mt-8">
